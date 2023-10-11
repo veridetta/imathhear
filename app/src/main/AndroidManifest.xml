@@ -18,15 +18,18 @@
         tools:targetApi="34">
         <activity
             android:name=".activity.user.HasilTerjemahActivity"
+            android:screenOrientation="landscape"
             android:exported="false" />
         <activity
             android:name=".activity.admin.TambahActivity"
             android:exported="false" />
         <activity
             android:name=".activity.user.HitungActivity"
+            android:screenOrientation="landscape"
             android:exported="false"/>
         <activity
             android:name=".activity.user.AngkaActivity"
+            android:screenOrientation="landscape"
             android:exported="false"/>
         <activity
             android:name=".activity.user.DetailMateriActivity"

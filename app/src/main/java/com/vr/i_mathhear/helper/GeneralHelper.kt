@@ -149,7 +149,7 @@ fun generateRandomHitung(context: Context): List<HitungData> {
         var num2: Int
         var hasil: Int
         do {
-            num1 = Random.nextInt(1, 11)
+            num1 = Random.nextInt(1, 9)
             num2 = generateRandomNumber(num1)
             hasil = num1 + num2
         } while (result.any { it.hasil == hasil })
@@ -159,7 +159,7 @@ fun generateRandomHitung(context: Context): List<HitungData> {
     }
 
     for (level in 4..5) {
-        val num1 = Random.nextInt(1, 11)
+        val num1 = Random.nextInt(1, 9)
         val num2 = generateRandomNumber(num1)
         val gambar = getGambarRandom(context)
         val hasil = if (level <= 3) num1 + num2 else num1 - num2
