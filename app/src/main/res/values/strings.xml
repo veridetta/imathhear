@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">I-Math Hear</string>
+    <string name="materi">MATERI</string>
+    <string name="terjemahkan">TERJEMAHKAN</string>
+    <string-array name="gambar">
+        <item>ayam</item>
+        <item>bebek</item>
+        <item>itik</item>
+        <item>jeruk</item>
+        <item>apel</item>
+    </string-array>
+</resources>

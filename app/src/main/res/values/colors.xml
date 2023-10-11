@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="biruMuda">#3F51B5</color>
+    <color name="hijauMuda">#4CAF50</color>
+    <color name="unguMuda">#9C27B0</color>
+    <color name="merahMuda">#F44336</color>
+    <color name="kuningMuda">#FFEB3B</color>
+    <color name="biruTua">#303F9F</color>
+    <color name="hijauTua">#388E3C</color>
+    <color name="unguTua">#7B1FA2</color>
+    <color name="merahTua">#D32F2F</color>
+    <color name="kuningTua">#FBC02D</color>
+    <color name="biru">#2196F3</color>
+    <color name="hijau">#8BC34A</color>
+    <color name="ungu">#673AB7</color>
+    <color name="merah">#F44336</color>
+    <color name="kuning">#FFC107</color>
+    <color name="biruGelap">#1A237E</color>
+    <color name="hijauGelap">#1B5E20</color>
+    <color name="unguGelap">#4A148C</color>
+    <color name="merahGelap">#B71C1C</color>
+    <color name="kuningGelap">#FFA000</color>
+    <color name="grey_1">#FAFAFA</color>
+    <color name="grey_2">#F5F5F5</color>
+    <color name="grey_3">#EEEEEE</color>
+    <color name="grey_4">#E0E0E0</color>
+    <color name="grey_5">#BDBDBD</color>
+    <color name="grey_6">#9E9E9E</color>
+    <color name="grey_7">#757575</color>
+</resources>

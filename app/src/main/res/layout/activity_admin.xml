@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contentView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.admin.AdminActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:orientation="vertical">
+                <!-- Background color for search input -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTambah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+ Tambah Materi"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/biru"
+                    android:padding="@dimen/_8sdp"
+                    android:background="@drawable/button_rounded"
+                    android:layout_marginBottom="@dimen/_12sdp"/>
+                <!-- RecyclerView for list of products -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcMateri"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@color/merahTua">
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/ic_logout"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

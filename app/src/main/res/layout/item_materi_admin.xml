@@ -1,0 +1,64 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btnMateri"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:cardMaxElevation="@dimen/_4sdp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/lyColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/biru"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvMateri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/materi"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_24sdp"
+            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_3sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!-- Background color for search input -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/biru"
+                    android:padding="@dimen/_3sdp"
+                    android:background="@drawable/button_rounded"
+                    android:layout_marginBottom="@dimen/_12sdp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnHapus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hapus"
+                    android:textSize="@dimen/_11sdp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:textColor="@color/biru"
+                    android:padding="@dimen/_3sdp"
+                    android:background="@drawable/button_rounded"
+                    android:layout_marginBottom="@dimen/_12sdp"/>
+            </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
