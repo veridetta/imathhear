@@ -92,8 +92,9 @@ class HitungActivity : AppCompatActivity() {
         btnNext.setOnClickListener {
             if(soalsekarang < 5){
                 if(soalsekarang==4){
-                    tvBtnNext.text = "Periksa Jawaban"
+                    tvBtnNext.text = "Selesai"
                     cekJawaban(lyJawab)
+                    soalsekarang++
                 }else{
                     cekJawaban(lyJawab)
                     soalsekarang++
@@ -106,10 +107,12 @@ class HitungActivity : AppCompatActivity() {
                     setSoal(soal[soalsekarang].angka1,soal[soalsekarang].angka2,
                         soal[soalsekarang].hasil,soal[soalsekarang].drawable!!)
                     clearJawaban()
+                    if(soalsekarang ==3){
+                        tvBtnNext.text = "Periksa Jawaban"
+                    }
                 }
-            }else if(soalsekarang == 5){
-                cekJawaban(lyJawab)
-                btnNext.visibility = View.GONE
+            }else {
+                finish()
             }
         }
         btnOpsiA.setOnClickListener {

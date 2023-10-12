@@ -29,6 +29,7 @@ class AngkaActivity : AppCompatActivity() {
     lateinit var soalSatu  : ImageView
     lateinit var soalDua   : ImageView
     lateinit var jawabSatu   : TextView
+    lateinit var tvNext   : TextView
     lateinit var jawabDua   : TextView
     lateinit var panahSatuLeft   : ImageView
     lateinit var panahSatuRight   : ImageView
@@ -71,6 +72,7 @@ class AngkaActivity : AppCompatActivity() {
         btnHome = findViewById(R.id.btnHome)
         btnNext = findViewById(R.id.btnNext)
         contentUtama = findViewById(R.id.contentUtama)
+        tvNext = findViewById(R.id.tvNext)
     }
     private fun initClick(){
         btnBack.setOnClickListener {
@@ -83,9 +85,10 @@ class AngkaActivity : AppCompatActivity() {
         }
         btnNext.setOnClickListener {
             if(soalsekarang < 5){
-
                 if(soalsekarang==4){
                     cekJawaban(soal!![soalsekarang][0],soal!![soalsekarang][1])
+                    soalsekarang++
+                    tvNext.text = "Selesai"
                 }else{
                     cekJawaban(soal!![soalsekarang][0],soal!![soalsekarang][1])
                     soalsekarang++
@@ -94,9 +97,12 @@ class AngkaActivity : AppCompatActivity() {
                     jawabanDuaSekarang = true
                     jawabSatu.text = "0"
                     jawabDua.text = "0"
+                    if(soalsekarang ==3){
+                        tvNext.text = "Periksa Jawaban"
+                    }
                 }
             }else{
-                btnNext.visibility = View.GONE
+                finish()
             }
         }
         panahSatuLeft.setOnClickListener {
