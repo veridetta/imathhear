@@ -5,6 +5,7 @@ import android.content.res.ColorStateList
 import android.content.res.Resources
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -149,20 +150,21 @@ fun generateRandomHitung(context: Context): List<HitungData> {
         var num2: Int
         var hasil: Int
         do {
-            num1 = Random.nextInt(1, 9)
+            num1 = Random.nextInt(1, 10)
             num2 = generateRandomNumber(num1)
             hasil = num1 + num2
         } while (result.any { it.hasil == hasil })
-
+        Log.d("hasil ",hasil.toString())
         val gambar = getGambarRandom(context)
         result.add(HitungData(num1, num2, hasil, gambar))
     }
 
     for (level in 4..5) {
-        val num1 = Random.nextInt(1, 9)
+        val num1 = Random.nextInt(1, 10)
         val num2 = generateRandomNumber(num1)
         val gambar = getGambarRandom(context)
         val hasil = if (level <= 3) num1 + num2 else num1 - num2
+        Log.d("hasil ",hasil.toString())
         result.add(HitungData(num1, num2, hasil, gambar))
     }
 
@@ -171,7 +173,11 @@ fun generateRandomHitung(context: Context): List<HitungData> {
 
 fun generateRandomNumber(num1: Int): Int {
     val maxNum2 = minOf(10 - num1, num1 - 1)
-    return Random.nextInt(1, maxNum2 + 1)
+    return if (maxNum2 > 0) {
+        Random.nextInt(1, maxNum2 + 1)
+    } else {
+        Random.nextInt(1, 5)
+    }
 }
 
 fun tambahkanGambarKeLinearLayout(context: Context, lySoal: LinearLayout, drawable: Drawable, jumlahGambar: Int) {
