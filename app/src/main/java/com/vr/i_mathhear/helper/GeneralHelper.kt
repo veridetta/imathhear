@@ -150,8 +150,8 @@ fun generateRandomHitung(context: Context): List<HitungData> {
         var num2: Int
         var hasil: Int
         do {
-            num1 = Random.nextInt(1, 10)
-            num2 = generateRandomNumber(num1)
+            num1 = Random.nextInt(1, 5)
+            num2 = generateRandomNumber(num1,level)
             hasil = num1 + num2
         } while (result.any { it.hasil == hasil })
         Log.d("hasil ",hasil.toString())
@@ -159,26 +159,38 @@ fun generateRandomHitung(context: Context): List<HitungData> {
         result.add(HitungData(num1, num2, hasil, gambar))
     }
 
-    for (level in 4..5) {
-        val num1 = Random.nextInt(1, 10)
-        val num2 = generateRandomNumber(num1)
+    for (level in 4..4) {
+        val num1 = Random.nextInt(1, 5)
+        val num2 = generateRandomNumber(num1,level)
         val gambar = getGambarRandom(context)
         val hasil = if (level <= 3) num1 + num2 else num1 - num2
         Log.d("hasil ",hasil.toString())
         result.add(HitungData(num1, num2, hasil, gambar))
     }
-
+    for (level in 5..5) {
+        val num1 = Random.nextInt(1, 10)
+        val num2 = generateRandomNumber(num1,level)
+        val gambar = getGambarRandom(context)
+        val hasil = if (level <= 3) num1 + num2 else num1 - num2
+        Log.d("hasil ",hasil.toString())
+        result.add(HitungData(num1, num2, hasil, gambar))
+    }
     return result
 }
 
-fun generateRandomNumber(num1: Int): Int {
-    val maxNum2 = minOf(10 - num1, num1 - 1)
-    return if (maxNum2 > 0) {
-        Random.nextInt(1, maxNum2 + 1)
+fun generateRandomNumber(num1: Int, lvel: Int): Int {
+    if (lvel < 5) {
+        return Random.nextInt(1, 5) // Menghasilkan angka acak antara 1 hingga 4
     } else {
-        Random.nextInt(1, 5)
+        val maxNum2 = minOf(10 - num1, num1 - 1)
+        return if (maxNum2 > 0) {
+            Random.nextInt(1, maxNum2 + 1)
+        } else {
+            Random.nextInt(1, 3)
+        }
     }
 }
+
 
 fun tambahkanGambarKeLinearLayout(context: Context, lySoal: LinearLayout, drawable: Drawable, jumlahGambar: Int) {
     // Maksimal 5 gambar per LinearLayout
